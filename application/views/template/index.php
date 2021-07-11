@@ -454,6 +454,10 @@
             },
             success:function(response){
               $('.loading').html('<div class="sent-message text-center">Your message has been sent. Thank you!</div>');  
+              $('#name').val('');
+              $('#email').val('');
+              $('#subject').val('');
+              $('textarea').val('')
               setTimeout(() => {
                 $('.loading').html('<div class="sent-message text-center"></div>');  
               }, 3000);
