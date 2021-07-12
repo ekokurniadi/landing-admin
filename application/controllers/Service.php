@@ -170,7 +170,7 @@ class Service extends MY_Controller {
     public function update_action() 
     {
         $id = $this->input->post('id', TRUE);
-        $row = $this->About_model->get_by_id($id);
+        $row = $this->Service_model->get_by_id($id);
             $data = array(
 		'title' => $this->input->post('title',TRUE),
 		'subtitle' => $this->input->post('subtitle',TRUE),

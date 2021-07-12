@@ -176,7 +176,7 @@ class Testimoni extends MY_Controller {
     public function update_action() 
     {
         $id = $this->input->post('id', TRUE);
-        $row = $this->About_model->get_by_id($id);
+        $row = $this->Testimoni_model->get_by_id($id);
        
             $data = array(
 		'user_profile' => $ $_FILES['user_profile']['name'] == "" ? $row->user_profile : upload_gambar_biasa('testi', 'image/', 'png|jpg|PNG|JPG|JPEG|jpeg', 20000, 'user_profile'),

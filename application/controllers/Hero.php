@@ -167,7 +167,7 @@ class Hero extends MY_Controller
     public function update_action()
     {
         $id = $this->input->post('id', TRUE);
-        $row = $this->About_model->get_by_id($id);
+        $row = $this->Hero_model->get_by_id($id);
 
         $data = array(
             'heading' => $this->input->post('heading', TRUE),

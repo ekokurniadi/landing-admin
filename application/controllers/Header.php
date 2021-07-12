@@ -76,8 +76,8 @@ class Header extends MY_Controller {
         $sub_array=array();
         $sub_array[]=$index;
         $sub_array[]=$rows->title;
-        $sub_array[]="<img src=".base_url().'image/'.$rows->favicon." class='img-fluid' width='80px'>";
-        $sub_array[]="<img src=".base_url().'image/'.$rows->logo." class='img-fluid' width='80px'>";
+        $sub_array[]="<img src=".base_url().'image/'.$rows->favicon." width='80px'>";
+        $sub_array[]="<img src=".base_url().'image/'.$rows->logo."  width='80px'>";
         $sub_array[]=$button1." ".$button2." ".$button3;
         $result[]      = $sub_array;
         $index++;
@@ -132,8 +132,8 @@ class Header extends MY_Controller {
         
         $data = array(
 		'title' => $this->input->post('title',TRUE),
-		'favicon' => upload_gambar_biasa('fav', 'image/', 'jpeg|png|jpg|gif', 10000, 'favicon'),
-		'logo' => upload_gambar_biasa2('logo', 'image/', 'jpeg|png|jpg|gif', 10000, 'logo'),
+		'favicon' => upload_gambar_biasa('fav', 'image/', 'jpeg|png|jpg|gif|svg|SVG', 10000, 'favicon'),
+		'logo' => upload_gambar_biasa2('logo', 'image/', 'jpeg|png|jpg|gif|svg|SVG', 10000, 'logo'),
 	    );
 
             $this->Header_model->insert($data);
@@ -173,8 +173,8 @@ class Header extends MY_Controller {
 
             $data = array(
 		'title' => $this->input->post('title',TRUE),
-		'favicon' => $_FILES['favicon']['name'] == "" ? $row->favicon : upload_gambar_biasa('fav', 'image/', 'jpeg|png|jpg|gif', 10000, 'favicon'),
-		'logo' => $_FILES['logo']['name'] == "" ? $row->logo : upload_gambar_biasa2('logo', 'image/', 'jpeg|png|jpg|gif', 10000, 'logo'),
+		'favicon' => $_FILES['favicon']['name'] == "" ? $row->favicon : upload_gambar_biasa('fav', 'image/', 'jpeg|png|jpg|gif|svg|SVG', 10000, 'favicon'),
+		'logo' => $_FILES['logo']['name'] == "" ? $row->logo : upload_gambar_biasa2('logo', 'image/', 'jpeg|png|jpg|gif|svg|SVG', 10000, 'logo'),
 	    );
 
             $this->Header_model->update($this->input->post('id', TRUE), $data);

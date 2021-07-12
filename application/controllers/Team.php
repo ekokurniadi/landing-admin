@@ -190,7 +190,7 @@ class Team extends MY_Controller {
     public function update_action() 
     {
         $id = $this->input->post('id', TRUE);
-        $row = $this->Galery_model->get_by_id($id);
+        $row = $this->Team_model->get_by_id($id);
         $this->_rules();
 
             $data = array(
