@@ -45,7 +45,7 @@
       <div class="logo mr-auto">
         <!-- <h1 class="text-light"><a href="index.html"><span>Bootslander</span></a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="<?= base_url() ?>"><img src="<?php echo base_url() ?>image/<?= $header->row()->logo ?>" alt="" width="auto"></a>
+        <a href="<?= base_url() ?>"><img src="<?php echo base_url() ?>image/<?= $header->row()->logo ?>" alt="" width="150px"></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
